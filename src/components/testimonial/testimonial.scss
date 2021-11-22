@@ -1,0 +1,111 @@
+@import "../../global.scss";
+.testimonial {
+  background-color: #f5f4f4;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  @include mobile {
+    justify-content: space-around;
+  }
+  h1 {
+    font-size: 50px;
+    @include mobile {
+      font-size: 20px;
+    }
+  }
+  .Container {
+    width: 100%;
+    height: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include mobile {
+      flex-direction: column;
+      height: 100%;
+    }
+    .card {
+      width: 250px;
+      height: 70%;
+      border-radius: 10px;
+      box-shadow: 0px 0px 15px -8px black;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      padding: 20px;
+      transition: all 0.7s ease-in-out;
+      // margin: 0px 15px;
+      background-color: lightgray;
+      @include mobile {
+        height: 180px;
+        margin: 10px 0;
+      }
+      &:hover {
+        transform: scale(1.1);
+      }
+
+      .top {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        @include mobile {
+          height: 60px;
+          justify-content: start;
+        }
+        img {
+          &.left {
+            height: 70px;
+            width: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            @include mobile {
+              width: 40px;
+              height: 40px;
+            }
+          }
+        }
+        .icon {
+          font-size: 25px;
+          cursor: pointer;
+          @include mobile {
+            font-size: 15px;
+          }
+          .yutube {
+            color: red;
+            margin: 10px 5px;
+          }
+          .facebook {
+            color: #4867aa;
+            margin: 10px 5px;
+          }
+          .twitter {
+            color: red;
+            margin: 10px 5px;
+            color: #2ba5da;
+          }
+        }
+      }
+      .center {
+        padding: 10px;
+        background-color: #d4cbcb;
+        border-radius: 10px;
+        @include mobile {
+          font-size: 12px;
+          padding: 5px;
+        }
+      }
+      .bottom {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        h3 {
+          margin-bottom: 5px;
+        }
+        h4 {
+          color: rgb(136, 135, 135);
+        }
+      }
+    }
+  }
+}
